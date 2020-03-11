@@ -39,9 +39,9 @@
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelCabelList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.cabelListCtrl = new Current.CabelListControl();
             this.documentManagerApplicationContent = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.cabelListCtrl = new Current.CabelListControl();
             this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
@@ -130,6 +130,14 @@
             this.dockPanel1_Container.Size = new System.Drawing.Size(1272, 614);
             this.dockPanel1_Container.TabIndex = 0;
             // 
+            // cabelListCtrl
+            // 
+            this.cabelListCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cabelListCtrl.Location = new System.Drawing.Point(0, 0);
+            this.cabelListCtrl.Name = "cabelListCtrl";
+            this.cabelListCtrl.Size = new System.Drawing.Size(1272, 614);
+            this.cabelListCtrl.TabIndex = 0;
+            // 
             // documentManagerApplicationContent
             // 
             this.documentManagerApplicationContent.ContainerControl = this;
@@ -147,14 +155,6 @@
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
             dockingContainer1});
             // 
-            // cabelListCtrl
-            // 
-            this.cabelListCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cabelListCtrl.Location = new System.Drawing.Point(0, 0);
-            this.cabelListCtrl.Name = "cabelListCtrl";
-            this.cabelListCtrl.Size = new System.Drawing.Size(1272, 614);
-            this.cabelListCtrl.TabIndex = 0;
-            // 
             // workspaceManager
             // 
             this.workspaceManager.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.False;
@@ -168,6 +168,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 799);
             this.Controls.Add(this.ribbonControl1);
+            this.MinimumSize = new System.Drawing.Size(530, 330);
             this.Name = "CurrentMainForm";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Current";
