@@ -12,11 +12,17 @@ namespace Current
 {
     public partial class CableListControl : ParentUserControl
     {
+        private BindingList<Cable> DataSource
+        {
+            get { return gridControl1.DataSource as BindingList<Cable>; }
+            set { gridControl1.DataSource = value; }
+        }
+
         public CableListControl()
         {
             InitializeComponent();
 
-            gridControl1.DataSource = new BindingList<Cable>();
+            DataSource = new BindingList<Cable>();
         }
 
         public void AddNewCable()
