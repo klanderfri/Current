@@ -1,6 +1,6 @@
 ﻿namespace Current
 {
-    partial class CabelListControl
+    partial class CableListControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,16 +30,16 @@
         {
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.bandedGridView1 = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
-            this.bandedGridColumnCabelID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumnCabelLength = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumnCabelColour = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumnCabelDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.gridBandCabel = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.bandedGridColumnCableID = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumnCableLength = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumnCableColour = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumnCableDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.gridBandCable = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.gridBandDirection = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.bandedGridColumnDirectionFrom = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.bandedGridColumnDirectionTo = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumnCabelFromDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
-            this.bandedGridColumnCabelToDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumnCableFromDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.bandedGridColumnCableToDiameter = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,68 +58,68 @@
             // bandedGridView1
             // 
             this.bandedGridView1.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
-            this.gridBandCabel,
+            this.gridBandCable,
             this.gridBandDirection});
             this.bandedGridView1.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
-            this.bandedGridColumnCabelID,
-            this.bandedGridColumnCabelLength,
-            this.bandedGridColumnCabelColour,
-            this.bandedGridColumnCabelDiameter,
+            this.bandedGridColumnCableID,
+            this.bandedGridColumnCableLength,
+            this.bandedGridColumnCableColour,
+            this.bandedGridColumnCableDiameter,
             this.bandedGridColumnDirectionFrom,
             this.bandedGridColumnDirectionTo,
-            this.bandedGridColumnCabelFromDiameter,
-            this.bandedGridColumnCabelToDiameter});
+            this.bandedGridColumnCableFromDiameter,
+            this.bandedGridColumnCableToDiameter});
             this.bandedGridView1.GridControl = this.gridControl1;
             this.bandedGridView1.Name = "bandedGridView1";
             this.bandedGridView1.OptionsView.ColumnAutoWidth = false;
             // 
-            // bandedGridColumnCabelID
+            // bandedGridColumnCableID
             // 
-            this.bandedGridColumnCabelID.Caption = "ID";
-            this.bandedGridColumnCabelID.FieldName = "ID";
-            this.bandedGridColumnCabelID.Name = "bandedGridColumnCabelID";
-            this.bandedGridColumnCabelID.Visible = true;
-            this.bandedGridColumnCabelID.Width = 30;
+            this.bandedGridColumnCableID.Caption = "ID";
+            this.bandedGridColumnCableID.FieldName = "ID";
+            this.bandedGridColumnCableID.Name = "bandedGridColumnCableID";
+            this.bandedGridColumnCableID.Visible = true;
+            this.bandedGridColumnCableID.Width = 30;
             // 
-            // bandedGridColumnCabelLength
+            // bandedGridColumnCableLength
             // 
-            this.bandedGridColumnCabelLength.Caption = "Length";
-            this.bandedGridColumnCabelLength.FieldName = "LengthInMeter";
-            this.bandedGridColumnCabelLength.Name = "bandedGridColumnCabelLength";
-            this.bandedGridColumnCabelLength.Visible = true;
+            this.bandedGridColumnCableLength.Caption = "Length";
+            this.bandedGridColumnCableLength.FieldName = "LengthInMeter";
+            this.bandedGridColumnCableLength.Name = "bandedGridColumnCableLength";
+            this.bandedGridColumnCableLength.Visible = true;
             // 
-            // bandedGridColumnCabelColour
+            // bandedGridColumnCableColour
             // 
-            this.bandedGridColumnCabelColour.Caption = "Colour";
-            this.bandedGridColumnCabelColour.FieldName = "Colour";
-            this.bandedGridColumnCabelColour.Name = "bandedGridColumnCabelColour";
-            this.bandedGridColumnCabelColour.Visible = true;
+            this.bandedGridColumnCableColour.Caption = "Colour";
+            this.bandedGridColumnCableColour.FieldName = "Colour";
+            this.bandedGridColumnCableColour.Name = "bandedGridColumnCableColour";
+            this.bandedGridColumnCableColour.Visible = true;
             // 
-            // bandedGridColumnCabelDiameter
+            // bandedGridColumnCableDiameter
             // 
-            this.bandedGridColumnCabelDiameter.Caption = "Diameter";
-            this.bandedGridColumnCabelDiameter.FieldName = "DiameterInMeter";
-            this.bandedGridColumnCabelDiameter.Name = "bandedGridColumnCabelDiameter";
-            this.bandedGridColumnCabelDiameter.Visible = true;
+            this.bandedGridColumnCableDiameter.Caption = "Diameter";
+            this.bandedGridColumnCableDiameter.FieldName = "DiameterInMeter";
+            this.bandedGridColumnCableDiameter.Name = "bandedGridColumnCableDiameter";
+            this.bandedGridColumnCableDiameter.Visible = true;
             // 
-            // gridBandCabel
+            // gridBandCable
             // 
-            this.gridBandCabel.Caption = "Cabel";
-            this.gridBandCabel.Columns.Add(this.bandedGridColumnCabelID);
-            this.gridBandCabel.Columns.Add(this.bandedGridColumnCabelLength);
-            this.gridBandCabel.Columns.Add(this.bandedGridColumnCabelDiameter);
-            this.gridBandCabel.Columns.Add(this.bandedGridColumnCabelColour);
-            this.gridBandCabel.Name = "gridBandCabel";
-            this.gridBandCabel.VisibleIndex = 0;
-            this.gridBandCabel.Width = 255;
+            this.gridBandCable.Caption = "Cable";
+            this.gridBandCable.Columns.Add(this.bandedGridColumnCableID);
+            this.gridBandCable.Columns.Add(this.bandedGridColumnCableLength);
+            this.gridBandCable.Columns.Add(this.bandedGridColumnCableDiameter);
+            this.gridBandCable.Columns.Add(this.bandedGridColumnCableColour);
+            this.gridBandCable.Name = "gridBandCable";
+            this.gridBandCable.VisibleIndex = 0;
+            this.gridBandCable.Width = 255;
             // 
             // gridBandDirection
             // 
             this.gridBandDirection.Caption = "Direction";
             this.gridBandDirection.Columns.Add(this.bandedGridColumnDirectionFrom);
-            this.gridBandDirection.Columns.Add(this.bandedGridColumnCabelFromDiameter);
+            this.gridBandDirection.Columns.Add(this.bandedGridColumnCableFromDiameter);
             this.gridBandDirection.Columns.Add(this.bandedGridColumnDirectionTo);
-            this.gridBandDirection.Columns.Add(this.bandedGridColumnCabelToDiameter);
+            this.gridBandDirection.Columns.Add(this.bandedGridColumnCableToDiameter);
             this.gridBandDirection.Name = "gridBandDirection";
             this.gridBandDirection.VisibleIndex = 1;
             this.gridBandDirection.Width = 450;
@@ -140,26 +140,26 @@
             this.bandedGridColumnDirectionTo.Visible = true;
             this.bandedGridColumnDirectionTo.Width = 150;
             // 
-            // bandedGridColumnCabelFromDiameter
+            // bandedGridColumnCableFromDiameter
             // 
-            this.bandedGridColumnCabelFromDiameter.Caption = "Fr. Diameter";
-            this.bandedGridColumnCabelFromDiameter.FieldName = "FromConnectionDiameterInMeter";
-            this.bandedGridColumnCabelFromDiameter.Name = "bandedGridColumnCabelFromDiameter";
-            this.bandedGridColumnCabelFromDiameter.Visible = true;
+            this.bandedGridColumnCableFromDiameter.Caption = "Fr. Diameter";
+            this.bandedGridColumnCableFromDiameter.FieldName = "FromConnectionDiameterInMeter";
+            this.bandedGridColumnCableFromDiameter.Name = "bandedGridColumnCableFromDiameter";
+            this.bandedGridColumnCableFromDiameter.Visible = true;
             // 
-            // bandedGridColumnCabelToDiameter
+            // bandedGridColumnCableToDiameter
             // 
-            this.bandedGridColumnCabelToDiameter.Caption = "To Diameter";
-            this.bandedGridColumnCabelToDiameter.FieldName = "ToConnectionDiameterInMeter";
-            this.bandedGridColumnCabelToDiameter.Name = "bandedGridColumnCabelToDiameter";
-            this.bandedGridColumnCabelToDiameter.Visible = true;
+            this.bandedGridColumnCableToDiameter.Caption = "To Diameter";
+            this.bandedGridColumnCableToDiameter.FieldName = "ToConnectionDiameterInMeter";
+            this.bandedGridColumnCableToDiameter.Name = "bandedGridColumnCableToDiameter";
+            this.bandedGridColumnCableToDiameter.Visible = true;
             // 
-            // CabelListControl
+            // CableListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
-            this.Name = "CabelListControl";
+            this.Name = "CableListControl";
             this.Size = new System.Drawing.Size(1199, 623);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bandedGridView1)).EndInit();
@@ -171,15 +171,15 @@
 
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridView bandedGridView1;
-        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBandCabel;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelID;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelLength;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelDiameter;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelColour;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBandCable;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableID;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableLength;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableDiameter;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableColour;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBandDirection;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnDirectionFrom;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelFromDiameter;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableFromDiameter;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnDirectionTo;
-        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCabelToDiameter;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn bandedGridColumnCableToDiameter;
     }
 }

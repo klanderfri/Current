@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Current
 {
-    public class Cabel
+    public class Cable
     {
         public int ID { get; set; }
 

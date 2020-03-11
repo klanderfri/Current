@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Current
 {
-    public partial class CabelListControl : ParentUserControl
+    public partial class CableListControl : ParentUserControl
     {
-        public CabelListControl()
+        public CableListControl()
         {
             InitializeComponent();
 
-            gridControl1.DataSource = new BindingList<Cabel>();
+            gridControl1.DataSource = new BindingList<Cable>();
         }
 
-        public void AddNewCabel()
+        public void AddNewCable()
         {
             throw new NotImplementedException();
         }

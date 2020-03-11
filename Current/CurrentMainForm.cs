@@ -44,9 +44,9 @@ namespace Current
             }
         }
 
-        private void barButtonItemAddNewCabel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItemAddNewCable_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            cabelListCtrl.AddNewCabel();
+            cableListCtrl.AddNewCable();
         }
     }
 }

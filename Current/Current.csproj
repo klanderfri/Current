@@ -55,12 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cabel.cs" />
-    <Compile Include="CabelListControl.cs">
+    <Compile Include="Cable.cs" />
+    <Compile Include="CableListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CabelListControl.Designer.cs">
-      <DependentUpon>CabelListControl.cs</DependentUpon>
+    <Compile Include="CableListControl.Designer.cs">
+      <DependentUpon>CableListControl.cs</DependentUpon>
     </Compile>
     <Compile Include="CurrentMainForm.cs">
       <SubType>Form</SubType>
@@ -76,8 +76,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CabelListControl.resx">
-      <DependentUpon>CabelListControl.cs</DependentUpon>
+    <EmbeddedResource Include="CableListControl.resx">
+      <DependentUpon>CableListControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CurrentMainForm.resx">
       <DependentUpon>CurrentMainForm.cs</DependentUpon>

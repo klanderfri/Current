@@ -36,20 +36,20 @@
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonPageDocumentation = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroupCabels = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupCables = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
-            this.dockPanelCabelList = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanelCableList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.cabelListCtrl = new Current.CabelListControl();
+            this.cableListCtrl = new Current.CableListControl();
             this.documentManagerApplicationContent = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
-            this.barButtonItemAddNewCabel = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddNewCable = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerApplicationContent)).BeginInit();
-            this.dockPanelCabelList.SuspendLayout();
+            this.dockPanelCableList.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerApplicationContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -62,8 +62,8 @@
             // 
             // document1
             // 
-            this.document1.Caption = "Cabel List";
-            this.document1.ControlName = "dockPanelCabelList";
+            this.document1.Caption = "Cable List";
+            this.document1.ControlName = "dockPanelCableList";
             this.document1.FloatLocation = new System.Drawing.Point(0, 0);
             this.document1.FloatSize = new System.Drawing.Size(200, 200);
             this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
@@ -75,7 +75,7 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItemAddNewCabel});
+            this.barButtonItemAddNewCable});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.MaxItemId = 2;
             this.ribbonControl1.Name = "ribbonControl1";
@@ -89,21 +89,21 @@
             // ribbonPageDocumentation
             // 
             this.ribbonPageDocumentation.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroupCabels});
+            this.ribbonPageGroupCables});
             this.ribbonPageDocumentation.Name = "ribbonPageDocumentation";
             this.ribbonPageDocumentation.Text = "Documentation";
             // 
-            // ribbonPageGroupCabels
+            // ribbonPageGroupCables
             // 
-            this.ribbonPageGroupCabels.ItemLinks.Add(this.barButtonItemAddNewCabel);
-            this.ribbonPageGroupCabels.Name = "ribbonPageGroupCabels";
-            this.ribbonPageGroupCabels.Text = "Cabels";
+            this.ribbonPageGroupCables.ItemLinks.Add(this.barButtonItemAddNewCable);
+            this.ribbonPageGroupCables.Name = "ribbonPageGroupCables";
+            this.ribbonPageGroupCables.Text = "Cables";
             // 
             // dockManagerApplicationContent
             // 
             this.dockManagerApplicationContent.Form = this;
             this.dockManagerApplicationContent.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanelCabelList});
+            this.dockPanelCableList});
             this.dockManagerApplicationContent.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -117,30 +117,30 @@
             "DevExpress.XtraBars.TabFormControl",
             "DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl"});
             // 
-            // dockPanelCabelList
+            // dockPanelCableList
             // 
-            this.dockPanelCabelList.Controls.Add(this.dockPanel1_Container);
-            this.dockPanelCabelList.DockedAsTabbedDocument = true;
-            this.dockPanelCabelList.ID = new System.Guid("ada24b00-ba54-4ebf-98d1-c507d6693587");
-            this.dockPanelCabelList.Name = "dockPanelCabelList";
-            this.dockPanelCabelList.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanelCabelList.Text = "Cabel List";
+            this.dockPanelCableList.Controls.Add(this.dockPanel1_Container);
+            this.dockPanelCableList.DockedAsTabbedDocument = true;
+            this.dockPanelCableList.ID = new System.Guid("ada24b00-ba54-4ebf-98d1-c507d6693587");
+            this.dockPanelCableList.Name = "dockPanelCableList";
+            this.dockPanelCableList.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanelCableList.Text = "Cable List";
             // 
             // dockPanel1_Container
             // 
-            this.dockPanel1_Container.Controls.Add(this.cabelListCtrl);
+            this.dockPanel1_Container.Controls.Add(this.cableListCtrl);
             this.dockPanel1_Container.Location = new System.Drawing.Point(0, 0);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(1272, 614);
             this.dockPanel1_Container.TabIndex = 0;
             // 
-            // cabelListCtrl
+            // cableListCtrl
             // 
-            this.cabelListCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cabelListCtrl.Location = new System.Drawing.Point(0, 0);
-            this.cabelListCtrl.Name = "cabelListCtrl";
-            this.cabelListCtrl.Size = new System.Drawing.Size(1272, 614);
-            this.cabelListCtrl.TabIndex = 0;
+            this.cableListCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cableListCtrl.Location = new System.Drawing.Point(0, 0);
+            this.cableListCtrl.Name = "cableListCtrl";
+            this.cableListCtrl.Size = new System.Drawing.Size(1272, 614);
+            this.cableListCtrl.TabIndex = 0;
             // 
             // documentManagerApplicationContent
             // 
@@ -166,13 +166,13 @@
             this.workspaceManager.TargetControl = this;
             this.workspaceManager.TransitionType = pushTransition1;
             // 
-            // barButtonItemAddNewCabel
+            // barButtonItemAddNewCable
             // 
-            this.barButtonItemAddNewCabel.Caption = "Add New";
-            this.barButtonItemAddNewCabel.Id = 1;
-            this.barButtonItemAddNewCabel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCabel.ImageOptions.SvgImage")));
-            this.barButtonItemAddNewCabel.Name = "barButtonItemAddNewCabel";
-            this.barButtonItemAddNewCabel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCabel_ItemClick);
+            this.barButtonItemAddNewCable.Caption = "Add New";
+            this.barButtonItemAddNewCable.Id = 1;
+            this.barButtonItemAddNewCable.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCable.ImageOptions.SvgImage")));
+            this.barButtonItemAddNewCable.Name = "barButtonItemAddNewCable";
+            this.barButtonItemAddNewCable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCable_ItemClick);
             // 
             // CurrentMainForm
             // 
@@ -190,7 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerApplicationContent)).EndInit();
-            this.dockPanelCabelList.ResumeLayout(false);
+            this.dockPanelCableList.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerApplicationContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
@@ -203,17 +203,17 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageDocumentation;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupCabels;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupCables;
         private DevExpress.XtraBars.Docking.DockManager dockManagerApplicationContent;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanelCabelList;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanelCableList;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManagerApplicationContent;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
-        private CabelListControl cabelListCtrl;
+        private CableListControl cableListCtrl;
         private DevExpress.Utils.WorkspaceManager workspaceManager;
-        private DevExpress.XtraBars.BarButtonItem barButtonItemAddNewCabel;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddNewCable;
     }
 }
 
