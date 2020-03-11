@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageDocumentation = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
+            this.dockPanelCabelList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
@@ -44,7 +44,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerApplicationContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
-            this.dockPanel1.SuspendLayout();
+            this.dockPanelCabelList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             this.SuspendLayout();
@@ -58,18 +58,18 @@
             this.ribbonControl1.MaxItemId = 1;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
-            this.ribbonPage1});
+            this.ribbonPageDocumentation});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl1.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl1.Size = new System.Drawing.Size(1278, 154);
             // 
-            // ribbonPage1
+            // ribbonPageDocumentation
             // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageDocumentation.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPageDocumentation.Name = "ribbonPageDocumentation";
+            this.ribbonPageDocumentation.Text = "Documentation";
             // 
             // ribbonPageGroup1
             // 
@@ -80,7 +80,7 @@
             // 
             this.dockManagerApplicationContent.Form = this;
             this.dockManagerApplicationContent.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockPanel1});
+            this.dockPanelCabelList});
             this.dockManagerApplicationContent.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
             "DevExpress.XtraBars.StandaloneBarDockControl",
@@ -111,14 +111,14 @@
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
             dockingContainer1});
             // 
-            // dockPanel1
+            // dockPanelCabelList
             // 
-            this.dockPanel1.Controls.Add(this.dockPanel1_Container);
-            this.dockPanel1.DockedAsTabbedDocument = true;
-            this.dockPanel1.ID = new System.Guid("ada24b00-ba54-4ebf-98d1-c507d6693587");
-            this.dockPanel1.Name = "dockPanel1";
-            this.dockPanel1.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel1.Text = "dockPanel1";
+            this.dockPanelCabelList.Controls.Add(this.dockPanel1_Container);
+            this.dockPanelCabelList.DockedAsTabbedDocument = true;
+            this.dockPanelCabelList.ID = new System.Guid("ada24b00-ba54-4ebf-98d1-c507d6693587");
+            this.dockPanelCabelList.Name = "dockPanelCabelList";
+            this.dockPanelCabelList.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanelCabelList.Text = "Cabel List";
             // 
             // dockPanel1_Container
             // 
@@ -129,8 +129,8 @@
             // 
             // document1
             // 
-            this.document1.Caption = "dockPanel1";
-            this.document1.ControlName = "dockPanel1";
+            this.document1.Caption = "Cabel List";
+            this.document1.ControlName = "dockPanelCabelList";
             this.document1.FloatLocation = new System.Drawing.Point(0, 0);
             this.document1.FloatSize = new System.Drawing.Size(200, 200);
             this.document1.Properties.AllowClose = DevExpress.Utils.DefaultBoolean.True;
@@ -150,12 +150,12 @@
             this.Controls.Add(this.ribbonControl1);
             this.Name = "CurrentMainForm";
             this.Ribbon = this.ribbonControl1;
-            this.Text = "Form1";
+            this.Text = "Current";
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManagerApplicationContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
-            this.dockPanel1.ResumeLayout(false);
+            this.dockPanelCabelList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             this.ResumeLayout(false);
@@ -166,10 +166,10 @@
         #endregion
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageDocumentation;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.Docking.DockManager dockManagerApplicationContent;
-        private DevExpress.XtraBars.Docking.DockPanel dockPanel1;
+        private DevExpress.XtraBars.Docking.DockPanel dockPanelCabelList;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
