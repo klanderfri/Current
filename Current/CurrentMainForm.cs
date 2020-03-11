@@ -43,5 +43,10 @@ namespace Current
                 workspaceManager.ApplyWorkspace(LastUserLayoutName);
             }
         }
+
+        private void barButtonItemAddNewCabel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            cabelListCtrl.AddNewCabel();
+        }
     }
 }

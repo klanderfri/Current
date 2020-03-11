@@ -16,5 +16,10 @@ namespace Current
         {
             InitializeComponent();
         }
+
+        public void AddNewCabel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

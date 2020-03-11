@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
             DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentMainForm));
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.ribbonPageDocumentation = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupCabels = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelCabelList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
@@ -43,6 +44,7 @@
             this.documentManagerApplicationContent = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
+            this.barButtonItemAddNewCabel = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -72,9 +74,10 @@
             // 
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.ribbonControl1.ExpandCollapseItem});
+            this.ribbonControl1.ExpandCollapseItem,
+            this.barButtonItemAddNewCabel});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 1;
+            this.ribbonControl1.MaxItemId = 2;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageDocumentation});
@@ -86,14 +89,15 @@
             // ribbonPageDocumentation
             // 
             this.ribbonPageDocumentation.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup1});
+            this.ribbonPageGroupCabels});
             this.ribbonPageDocumentation.Name = "ribbonPageDocumentation";
             this.ribbonPageDocumentation.Text = "Documentation";
             // 
-            // ribbonPageGroup1
+            // ribbonPageGroupCabels
             // 
-            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
-            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            this.ribbonPageGroupCabels.ItemLinks.Add(this.barButtonItemAddNewCabel);
+            this.ribbonPageGroupCabels.Name = "ribbonPageGroupCabels";
+            this.ribbonPageGroupCabels.Text = "Cabels";
             // 
             // dockManagerApplicationContent
             // 
@@ -162,6 +166,14 @@
             this.workspaceManager.TargetControl = this;
             this.workspaceManager.TransitionType = pushTransition1;
             // 
+            // barButtonItemAddNewCabel
+            // 
+            this.barButtonItemAddNewCabel.Caption = "Add New";
+            this.barButtonItemAddNewCabel.Id = 1;
+            this.barButtonItemAddNewCabel.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCabel.ImageOptions.SvgImage")));
+            this.barButtonItemAddNewCabel.Name = "barButtonItemAddNewCabel";
+            this.barButtonItemAddNewCabel.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCabel_ItemClick);
+            // 
             // CurrentMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -191,7 +203,7 @@
 
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageDocumentation;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupCabels;
         private DevExpress.XtraBars.Docking.DockManager dockManagerApplicationContent;
         private DevExpress.XtraBars.Docking.DockPanel dockPanelCabelList;
         private DevExpress.XtraBars.Docking.ControlContainer dockPanel1_Container;
@@ -201,6 +213,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private CabelListControl cabelListCtrl;
         private DevExpress.Utils.WorkspaceManager workspaceManager;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddNewCabel;
     }
 }
 
