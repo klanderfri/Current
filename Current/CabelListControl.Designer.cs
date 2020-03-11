@@ -76,6 +76,7 @@
             // bandedGridColumnCabelID
             // 
             this.bandedGridColumnCabelID.Caption = "ID";
+            this.bandedGridColumnCabelID.FieldName = "ID";
             this.bandedGridColumnCabelID.Name = "bandedGridColumnCabelID";
             this.bandedGridColumnCabelID.Visible = true;
             this.bandedGridColumnCabelID.Width = 30;
@@ -83,18 +84,21 @@
             // bandedGridColumnCabelLength
             // 
             this.bandedGridColumnCabelLength.Caption = "Length";
+            this.bandedGridColumnCabelLength.FieldName = "LengthInMeter";
             this.bandedGridColumnCabelLength.Name = "bandedGridColumnCabelLength";
             this.bandedGridColumnCabelLength.Visible = true;
             // 
             // bandedGridColumnCabelColour
             // 
             this.bandedGridColumnCabelColour.Caption = "Colour";
+            this.bandedGridColumnCabelColour.FieldName = "Colour";
             this.bandedGridColumnCabelColour.Name = "bandedGridColumnCabelColour";
             this.bandedGridColumnCabelColour.Visible = true;
             // 
             // bandedGridColumnCabelDiameter
             // 
             this.bandedGridColumnCabelDiameter.Caption = "Diameter";
+            this.bandedGridColumnCabelDiameter.FieldName = "DiameterInMeter";
             this.bandedGridColumnCabelDiameter.Name = "bandedGridColumnCabelDiameter";
             this.bandedGridColumnCabelDiameter.Visible = true;
             // 
@@ -123,6 +127,7 @@
             // bandedGridColumnDirectionFrom
             // 
             this.bandedGridColumnDirectionFrom.Caption = "From";
+            this.bandedGridColumnDirectionFrom.FieldName = "From";
             this.bandedGridColumnDirectionFrom.Name = "bandedGridColumnDirectionFrom";
             this.bandedGridColumnDirectionFrom.Visible = true;
             this.bandedGridColumnDirectionFrom.Width = 150;
@@ -130,6 +135,7 @@
             // bandedGridColumnDirectionTo
             // 
             this.bandedGridColumnDirectionTo.Caption = "To";
+            this.bandedGridColumnDirectionTo.FieldName = "To";
             this.bandedGridColumnDirectionTo.Name = "bandedGridColumnDirectionTo";
             this.bandedGridColumnDirectionTo.Visible = true;
             this.bandedGridColumnDirectionTo.Width = 150;
@@ -137,12 +143,14 @@
             // bandedGridColumnCabelFromDiameter
             // 
             this.bandedGridColumnCabelFromDiameter.Caption = "Fr. Diameter";
+            this.bandedGridColumnCabelFromDiameter.FieldName = "FromConnectionDiameterInMeter";
             this.bandedGridColumnCabelFromDiameter.Name = "bandedGridColumnCabelFromDiameter";
             this.bandedGridColumnCabelFromDiameter.Visible = true;
             // 
             // bandedGridColumnCabelToDiameter
             // 
             this.bandedGridColumnCabelToDiameter.Caption = "To Diameter";
+            this.bandedGridColumnCabelToDiameter.FieldName = "ToConnectionDiameterInMeter";
             this.bandedGridColumnCabelToDiameter.Name = "bandedGridColumnCabelToDiameter";
             this.bandedGridColumnCabelToDiameter.Visible = true;
             // 
