@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
@@ -41,6 +42,7 @@
             this.documentManagerApplicationContent = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.cabelListCtrl = new Current.CabelListControl();
+            this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
@@ -153,6 +155,13 @@
             this.cabelListCtrl.Size = new System.Drawing.Size(1272, 614);
             this.cabelListCtrl.TabIndex = 0;
             // 
+            // workspaceManager
+            // 
+            this.workspaceManager.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.False;
+            this.workspaceManager.SaveTargetControlSettings = true;
+            this.workspaceManager.TargetControl = this;
+            this.workspaceManager.TransitionType = pushTransition1;
+            // 
             // CurrentMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,6 +171,8 @@
             this.Name = "CurrentMainForm";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Current";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CurrentMainForm_FormClosed);
+            this.Load += new System.EventHandler(this.CurrentMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
@@ -188,6 +199,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
         private CabelListControl cabelListCtrl;
+        private DevExpress.Utils.WorkspaceManager workspaceManager;
     }
 }
 
