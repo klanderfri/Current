@@ -1,6 +1,6 @@
 ﻿namespace Current
 {
-    partial class Form1
+    partial class CurrentMainForm
     {
         /// <summary>
         /// Required designer variable.

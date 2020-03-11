@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Current
 {
-    public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class CurrentMainForm : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Form1()
+        public CurrentMainForm()
         {
             InitializeComponent();
         }
