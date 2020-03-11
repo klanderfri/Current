@@ -289,7 +289,7 @@ namespace Current.Database {
             
             private global::System.Data.DataColumn columnPhone;
             
-            private global::System.Data.DataColumn columnGender;
+            private global::System.Data.DataColumn columnHasBasicTraining;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -366,9 +366,9 @@ namespace Current.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn GenderColumn {
+            public global::System.Data.DataColumn HasBasicTrainingColumn {
                 get {
-                    return this.columnGender;
+                    return this.columnHasBasicTraining;
                 }
             }
             
@@ -409,7 +409,7 @@ namespace Current.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CrewRow AddCrewRow(int Id, string FullName, string Email, string Adress, string Phone, bool Gender) {
+            public CrewRow AddCrewRow(int Id, string FullName, string Email, string Adress, string Phone, bool HasBasicTraining) {
                 CrewRow rowCrewRow = ((CrewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Id,
@@ -417,7 +417,7 @@ namespace Current.Database {
                         Email,
                         Adress,
                         Phone,
-                        Gender};
+                        HasBasicTraining};
                 rowCrewRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowCrewRow);
                 return rowCrewRow;
@@ -452,7 +452,7 @@ namespace Current.Database {
                 this.columnEmail = base.Columns["Email"];
                 this.columnAdress = base.Columns["Adress"];
                 this.columnPhone = base.Columns["Phone"];
-                this.columnGender = base.Columns["Gender"];
+                this.columnHasBasicTraining = base.Columns["HasBasicTraining"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -468,8 +468,8 @@ namespace Current.Database {
                 base.Columns.Add(this.columnAdress);
                 this.columnPhone = new global::System.Data.DataColumn("Phone", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhone);
-                this.columnGender = new global::System.Data.DataColumn("Gender", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnGender);
+                this.columnHasBasicTraining = new global::System.Data.DataColumn("HasBasicTraining", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHasBasicTraining);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AllowDBNull = false;
@@ -695,17 +695,17 @@ namespace Current.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool Gender {
+            public bool HasBasicTraining {
                 get {
                     try {
-                        return ((bool)(this[this.tableCrew.GenderColumn]));
+                        return ((bool)(this[this.tableCrew.HasBasicTrainingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Gender\' in table \'Crew\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'HasBasicTraining\' in table \'Crew\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCrew.GenderColumn] = value;
+                    this[this.tableCrew.HasBasicTrainingColumn] = value;
                 }
             }
             
@@ -759,14 +759,14 @@ namespace Current.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsGenderNull() {
-                return this.IsNull(this.tableCrew.GenderColumn);
+            public bool IsHasBasicTrainingNull() {
+                return this.IsNull(this.tableCrew.HasBasicTrainingColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetGenderNull() {
-                this[this.tableCrew.GenderColumn] = global::System.Convert.DBNull;
+            public void SetHasBasicTrainingNull() {
+                this[this.tableCrew.HasBasicTrainingColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -934,11 +934,11 @@ namespace Current.Database.CrewDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Adress", "Adress");
             tableMapping.ColumnMappings.Add("Phone", "Phone");
-            tableMapping.ColumnMappings.Add("Gender", "Gender");
+            tableMapping.ColumnMappings.Add("HasBasicTraining", "HasBasicTraining");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Crew] WHERE (([Id] = @Original_Id) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Crew] WHERE (([Id] = @Original_Id) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_HasBasicTraining = 1 AND [HasBasicTraining] IS NULL) OR ([HasBasicTraining] = @Original_HasBasicTraining)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -949,31 +949,32 @@ namespace Current.Database.CrewDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Gender", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Gender", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HasBasicTraining", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HasBasicTraining", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Crew] ([Id], [FullName], [Email], [Adress], [Phone], [Gender])" +
-                " VALUES (@Id, @FullName, @Email, @Adress, @Phone, @Gender);\r\nSELECT Id, FullName" +
-                ", Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Crew] ([Id], [FullName], [Email], [Adress], [Phone], [HasBasic" +
+                "Training]) VALUES (@Id, @FullName, @Email, @Adress, @Phone, @HasBasicTraining);\r" +
+                "\nSELECT Id, FullName, Email, Adress, Phone, HasBasicTraining FROM Crew WHERE (Id" +
+                " = @Id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gender", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HasBasicTraining", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Crew] SET [Id] = @Id, [FullName] = @FullName, [Email] = @Email, [Adress] = @Adress, [Phone] = @Phone, [Gender] = @Gender WHERE (([Id] = @Original_Id) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)));
-SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Crew] SET [Id] = @Id, [FullName] = @FullName, [Email] = @Email, [Adress] = @Adress, [Phone] = @Phone, [HasBasicTraining] = @HasBasicTraining WHERE (([Id] = @Original_Id) AND ((@IsNull_FullName = 1 AND [FullName] IS NULL) OR ([FullName] = @Original_FullName)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Phone = 1 AND [Phone] IS NULL) OR ([Phone] = @Original_Phone)) AND ((@IsNull_HasBasicTraining = 1 AND [HasBasicTraining] IS NULL) OR ([HasBasicTraining] = @Original_HasBasicTraining)));
+SELECT Id, FullName, Email, Adress, Phone, HasBasicTraining FROM Crew WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Gender", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HasBasicTraining", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FullName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FullName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FullName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -983,8 +984,8 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Adress", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Adress", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Gender", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Gender", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HasBasicTraining", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HasBasicTraining", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HasBasicTraining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1000,7 +1001,7 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, FullName, Email, Adress, Phone, Gender FROM dbo.Crew";
+            this._commandCollection[0].CommandText = "SELECT Id, FullName, Email, Adress, Phone, HasBasicTraining FROM dbo.Crew";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1061,7 +1062,7 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_Gender) {
+        public virtual int Delete(int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_HasBasicTraining) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
             if ((Original_FullName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -1095,9 +1096,9 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Phone));
             }
-            if ((Original_Gender.HasValue == true)) {
+            if ((Original_HasBasicTraining.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_Gender.Value));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((bool)(Original_HasBasicTraining.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
@@ -1123,7 +1124,7 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> Gender) {
+        public virtual int Insert(int Id, string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> HasBasicTraining) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
             if ((FullName == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1149,8 +1150,8 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Phone));
             }
-            if ((Gender.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(Gender.Value));
+            if ((HasBasicTraining.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(HasBasicTraining.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -1175,7 +1176,7 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> Gender, int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_Gender) {
+        public virtual int Update(int Id, string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> HasBasicTraining, int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_HasBasicTraining) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
             if ((FullName == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -1201,8 +1202,8 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Phone));
             }
-            if ((Gender.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(Gender.Value));
+            if ((HasBasicTraining.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(HasBasicTraining.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
@@ -1240,9 +1241,9 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Phone));
             }
-            if ((Original_Gender.HasValue == true)) {
+            if ((Original_HasBasicTraining.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_Gender.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_HasBasicTraining.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
@@ -1268,8 +1269,8 @@ SELECT Id, FullName, Email, Adress, Phone, Gender FROM Crew WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> Gender, int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_Gender) {
-            return this.Update(Original_Id, FullName, Email, Adress, Phone, Gender, Original_Id, Original_FullName, Original_Email, Original_Adress, Original_Phone, Original_Gender);
+        public virtual int Update(string FullName, string Email, string Adress, string Phone, global::System.Nullable<bool> HasBasicTraining, int Original_Id, string Original_FullName, string Original_Email, string Original_Adress, string Original_Phone, global::System.Nullable<bool> Original_HasBasicTraining) {
+            return this.Update(Original_Id, FullName, Email, Adress, Phone, HasBasicTraining, Original_Id, Original_FullName, Original_Email, Original_Adress, Original_Phone, Original_HasBasicTraining);
         }
     }
     
