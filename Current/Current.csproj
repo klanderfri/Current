@@ -68,6 +68,12 @@
     <Compile Include="CurrentMainForm.Designer.cs">
       <DependentUpon>CurrentMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ParentUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ParentUserControl.Designer.cs">
+      <DependentUpon>ParentUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CabelListControl.resx">

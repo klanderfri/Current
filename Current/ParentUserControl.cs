@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Current
 {
-    public partial class CabelListControl : ParentUserControl
+    public partial class ParentUserControl : UserControl
     {
-        public CabelListControl()
+        public ParentUserControl()
         {
             InitializeComponent();
-        }
-
-        public void AddNewCabel()
-        {
-            throw new NotImplementedException();
         }
     }
 }
