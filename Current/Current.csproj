@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CabelListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CabelListControl.Designer.cs">
+      <DependentUpon>CabelListControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CurrentMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
