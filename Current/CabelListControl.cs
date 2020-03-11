@@ -15,6 +15,8 @@ namespace Current
         public CabelListControl()
         {
             InitializeComponent();
+
+            gridControl1.DataSource = new BindingList<Cabel>();
         }
 
         public void AddNewCabel()
