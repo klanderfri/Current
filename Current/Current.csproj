@@ -91,10 +91,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UsersDataSet.Designer.cs">
+    <Compile Include="Database\CrewDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+      <DependentUpon>CrewDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CableListControl.resx">
       <DependentUpon>CableListControl.cs</DependentUpon>
@@ -112,7 +112,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -122,23 +124,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="UsersDataSet.xsc">
-      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    <None Include="Database\CrewDataSet.xsc">
+      <DependentUpon>CrewDataSet.xsd</DependentUpon>
     </None>
-    <None Include="UsersDataSet.xsd">
+    <None Include="Database\CrewDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UsersDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>CrewDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="UsersDataSet.xss">
-      <DependentUpon>UsersDataSet.xsd</DependentUpon>
+    <None Include="Database\CrewDataSet.xss">
+      <DependentUpon>CrewDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
+    <Content Include="Database\Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database_log.ldf">
+    <Content Include="Database\Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
