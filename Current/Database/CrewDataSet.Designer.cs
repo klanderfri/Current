@@ -409,10 +409,10 @@ namespace Current.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public CrewRow AddCrewRow(int Id, string FullName, string Email, string Adress, string Phone, bool HasBasicTraining) {
+            public CrewRow AddCrewRow(string FullName, string Email, string Adress, string Phone, bool HasBasicTraining) {
                 CrewRow rowCrewRow = ((CrewRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         FullName,
                         Email,
                         Adress,
@@ -472,6 +472,8 @@ namespace Current.Database {
                 base.Columns.Add(this.columnHasBasicTraining);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnFullName.MaxLength = 100;

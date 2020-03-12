@@ -93,10 +93,10 @@ SELECT Id, FullName, Email, Adress, Phone, HasBasicTraining FROM Crew WHERE (Id 
   <xs:element name="CrewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CrewDataSet" msprop:Generator_UserDSName="CrewDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Crew" msprop:Generator_TableClassName="CrewDataTable" msprop:Generator_TableVarName="tableCrew" msprop:Generator_RowChangedName="CrewRowChanged" msprop:Generator_TablePropName="Crew" msprop:Generator_RowDeletingName="CrewRowDeleting" msprop:Generator_RowChangingName="CrewRowChanging" msprop:Generator_RowEvHandlerName="CrewRowChangeEventHandler" msprop:Generator_RowDeletedName="CrewRowDeleted" msprop:Generator_RowClassName="CrewRow" msprop:Generator_UserTableName="Crew" msprop:Generator_RowEvArgName="CrewRowChangeEvent">
+        <xs:element name="Crew" msprop:Generator_TableClassName="CrewDataTable" msprop:Generator_TableVarName="tableCrew" msprop:Generator_TablePropName="Crew" msprop:Generator_RowDeletingName="CrewRowDeleting" msprop:Generator_RowChangingName="CrewRowChanging" msprop:Generator_RowEvHandlerName="CrewRowChangeEventHandler" msprop:Generator_RowDeletedName="CrewRowDeleted" msprop:Generator_UserTableName="Crew" msprop:Generator_RowChangedName="CrewRowChanged" msprop:Generator_RowEvArgName="CrewRowChangeEvent" msprop:Generator_RowClassName="CrewRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="FullName" msprop:Generator_ColumnVarNameInTable="columnFullName" msprop:Generator_ColumnPropNameInRow="FullName" msprop:Generator_ColumnPropNameInTable="FullNameColumn" msprop:Generator_UserColumnName="FullName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
