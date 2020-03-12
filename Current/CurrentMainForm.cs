@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars.Ribbon;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,9 +47,14 @@ namespace Current
             }
         }
 
-        private void barButtonItemAddNewCable_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void barButtonItemAddNewCable_ItemClick(object sender, ItemClickEventArgs e)
         {
             cableListCtrl.AddNewCable();
+        }
+
+        private void barButtonItemAddNewCrew_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

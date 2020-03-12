@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentMainForm));
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
-            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -59,6 +59,8 @@
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
             this.crewTableAdapter = new Current.Database.CrewDataSetTableAdapters.CrewTableAdapter();
+            this.ribbonPageGroupCrew = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItemAddNewCrew = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document2)).BeginInit();
@@ -107,9 +109,10 @@
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItemAddNewCable});
+            this.barButtonItemAddNewCable,
+            this.barButtonItemAddNewCrew});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 2;
+            this.ribbonControl1.MaxItemId = 4;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageDocumentation});
@@ -129,7 +132,8 @@
             // ribbonPageDocumentation
             // 
             this.ribbonPageDocumentation.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroupCables});
+            this.ribbonPageGroupCables,
+            this.ribbonPageGroupCrew});
             this.ribbonPageDocumentation.Name = "ribbonPageDocumentation";
             this.ribbonPageDocumentation.Text = "Documentation";
             // 
@@ -300,20 +304,34 @@
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document1,
             this.document2});
-            dockingContainer2.Element = this.documentGroup1;
+            dockingContainer1.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
+            dockingContainer1});
             // 
             // workspaceManager
             // 
             this.workspaceManager.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.False;
             this.workspaceManager.SaveTargetControlSettings = true;
             this.workspaceManager.TargetControl = this;
-            this.workspaceManager.TransitionType = pushTransition2;
+            this.workspaceManager.TransitionType = pushTransition1;
             // 
             // crewTableAdapter
             // 
             this.crewTableAdapter.ClearBeforeFill = true;
+            // 
+            // ribbonPageGroupCrew
+            // 
+            this.ribbonPageGroupCrew.ItemLinks.Add(this.barButtonItemAddNewCrew);
+            this.ribbonPageGroupCrew.Name = "ribbonPageGroupCrew";
+            this.ribbonPageGroupCrew.Text = "Crew";
+            // 
+            // barButtonItemAddNewCrew
+            // 
+            this.barButtonItemAddNewCrew.Caption = "Add New";
+            this.barButtonItemAddNewCrew.Id = 2;
+            this.barButtonItemAddNewCrew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCrew.ImageOptions.SvgImage")));
+            this.barButtonItemAddNewCrew.Name = "barButtonItemAddNewCrew";
+            this.barButtonItemAddNewCrew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCrew_ItemClick);
             // 
             // CurrentMainForm
             // 
@@ -376,6 +394,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colPhone;
         private DevExpress.XtraGrid.Columns.GridColumn colHasBasicTraining;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemAddNewCrew;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroupCrew;
     }
 }
 
