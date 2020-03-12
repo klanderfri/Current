@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataObjects\Cable.cs" />
+    <Compile Include="GUI\BaseComponents\AppDataNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\BaseComponents\AppDataNavigator.Designer.cs">
+      <DependentUpon>AppDataNavigator.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Controls\CableListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
