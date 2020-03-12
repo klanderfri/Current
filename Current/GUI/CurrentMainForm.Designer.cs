@@ -30,25 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentMainForm));
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
-            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonItemAddNewCable = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItemAddNewCrew = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageDocumentation = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroupCables = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroupCrew = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelCableList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.cableListCtrl = new Current.GUI.Controls.CableListControl();
             this.dockPanelCrewList = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridControlCrewList = new DevExpress.XtraGrid.GridControl();
             this.crewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.crewDataSet = new Current.Database.CrewDataSet();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewCrewList = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,8 +61,6 @@
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.workspaceManager = new DevExpress.Utils.WorkspaceManager(this.components);
             this.crewTableAdapter = new Current.Database.CrewDataSetTableAdapters.CrewTableAdapter();
-            this.ribbonPageGroupCrew = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barButtonItemAddNewCrew = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.document2)).BeginInit();
@@ -70,10 +70,10 @@
             this.dockPanel1_Container.SuspendLayout();
             this.dockPanelCrewList.SuspendLayout();
             this.controlContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCrewList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCrewList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerApplicationContent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             this.SuspendLayout();
@@ -129,6 +129,14 @@
             this.barButtonItemAddNewCable.Name = "barButtonItemAddNewCable";
             this.barButtonItemAddNewCable.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCable_ItemClick);
             // 
+            // barButtonItemAddNewCrew
+            // 
+            this.barButtonItemAddNewCrew.Caption = "Add New";
+            this.barButtonItemAddNewCrew.Id = 2;
+            this.barButtonItemAddNewCrew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCrew.ImageOptions.SvgImage")));
+            this.barButtonItemAddNewCrew.Name = "barButtonItemAddNewCrew";
+            this.barButtonItemAddNewCrew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCrew_ItemClick);
+            // 
             // ribbonPageDocumentation
             // 
             this.ribbonPageDocumentation.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -142,6 +150,12 @@
             this.ribbonPageGroupCables.ItemLinks.Add(this.barButtonItemAddNewCable);
             this.ribbonPageGroupCables.Name = "ribbonPageGroupCables";
             this.ribbonPageGroupCables.Text = "Cables";
+            // 
+            // ribbonPageGroupCrew
+            // 
+            this.ribbonPageGroupCrew.ItemLinks.Add(this.barButtonItemAddNewCrew);
+            this.ribbonPageGroupCrew.Name = "ribbonPageGroupCrew";
+            this.ribbonPageGroupCrew.Text = "Crew";
             // 
             // dockManagerApplicationContent
             // 
@@ -198,24 +212,24 @@
             // 
             // controlContainer1
             // 
-            this.controlContainer1.Controls.Add(this.gridControl1);
+            this.controlContainer1.Controls.Add(this.gridControlCrewList);
             this.controlContainer1.Location = new System.Drawing.Point(0, 0);
             this.controlContainer1.Name = "controlContainer1";
             this.controlContainer1.Size = new System.Drawing.Size(1272, 614);
             this.controlContainer1.TabIndex = 0;
             // 
-            // gridControl1
+            // gridControlCrewList
             // 
-            this.gridControl1.DataSource = this.crewBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.ribbonControl1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1272, 614);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridControlCrewList.DataSource = this.crewBindingSource;
+            this.gridControlCrewList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlCrewList.Location = new System.Drawing.Point(0, 0);
+            this.gridControlCrewList.MainView = this.gridViewCrewList;
+            this.gridControlCrewList.MenuManager = this.ribbonControl1;
+            this.gridControlCrewList.Name = "gridControlCrewList";
+            this.gridControlCrewList.Size = new System.Drawing.Size(1272, 614);
+            this.gridControlCrewList.TabIndex = 0;
+            this.gridControlCrewList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridViewCrewList});
             // 
             // crewBindingSource
             // 
@@ -227,18 +241,18 @@
             this.crewDataSet.DataSetName = "CrewDataSet";
             this.crewDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gridView1
+            // gridViewCrewList
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewCrewList.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colId,
             this.colFullName,
             this.colEmail,
             this.colAddress,
             this.colPhone,
             this.colHasBasicTraining});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridViewCrewList.GridControl = this.gridControlCrewList;
+            this.gridViewCrewList.Name = "gridViewCrewList";
+            this.gridViewCrewList.OptionsView.ColumnAutoWidth = false;
             // 
             // colId
             // 
@@ -305,34 +319,20 @@
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document1,
             this.document2});
-            dockingContainer2.Element = this.documentGroup1;
+            dockingContainer1.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer2});
+            dockingContainer1});
             // 
             // workspaceManager
             // 
             this.workspaceManager.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.False;
             this.workspaceManager.SaveTargetControlSettings = true;
             this.workspaceManager.TargetControl = this;
-            this.workspaceManager.TransitionType = pushTransition2;
+            this.workspaceManager.TransitionType = pushTransition1;
             // 
             // crewTableAdapter
             // 
             this.crewTableAdapter.ClearBeforeFill = true;
-            // 
-            // ribbonPageGroupCrew
-            // 
-            this.ribbonPageGroupCrew.ItemLinks.Add(this.barButtonItemAddNewCrew);
-            this.ribbonPageGroupCrew.Name = "ribbonPageGroupCrew";
-            this.ribbonPageGroupCrew.Text = "Crew";
-            // 
-            // barButtonItemAddNewCrew
-            // 
-            this.barButtonItemAddNewCrew.Caption = "Add New";
-            this.barButtonItemAddNewCrew.Id = 2;
-            this.barButtonItemAddNewCrew.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemAddNewCrew.ImageOptions.SvgImage")));
-            this.barButtonItemAddNewCrew.Name = "barButtonItemAddNewCrew";
-            this.barButtonItemAddNewCrew.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemAddNewCrew_ItemClick);
             // 
             // CurrentMainForm
             // 
@@ -355,10 +355,10 @@
             this.dockPanel1_Container.ResumeLayout(false);
             this.dockPanelCrewList.ResumeLayout(false);
             this.controlContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlCrewList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.crewDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCrewList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManagerApplicationContent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             this.ResumeLayout(false);
@@ -384,8 +384,8 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document2;
         private DevExpress.XtraBars.Docking.DockPanel dockPanelCrewList;
         private DevExpress.XtraBars.Docking.ControlContainer controlContainer1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControlCrewList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCrewList;
         private Database.CrewDataSet crewDataSet;
         private System.Windows.Forms.BindingSource crewBindingSource;
         private Database.CrewDataSetTableAdapters.CrewTableAdapter crewTableAdapter;
