@@ -102,6 +102,7 @@
     <Compile Include="CurrentMainForm.Designer.cs">
       <DependentUpon>CurrentMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MessageBoxes.cs" />
     <Compile Include="ParentUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
