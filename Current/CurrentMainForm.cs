@@ -38,6 +38,8 @@ namespace Current
 
         private void CurrentMainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'crewDataSet.Crew' table. You can move, or remove it, as needed.
+            this.crewTableAdapter.Fill(this.crewDataSet.Crew);
             if (workspaceManager.LoadWorkspace(LastUserLayoutName, LastUserLayoutFile, true))
             {
                 workspaceManager.ApplyWorkspace(LastUserLayoutName);
