@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Current.GUI.BaseComponents;
+using Current.DataObjects;
 
-namespace Current
+namespace Current.GUI.Controls
 {
     public partial class CableListControl : ParentUserControl
     {

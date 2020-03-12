@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Current
+namespace Current.DataObjects
 {
     public class Cable
     {

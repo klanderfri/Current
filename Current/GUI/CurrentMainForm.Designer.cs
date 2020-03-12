@@ -1,4 +1,4 @@
-﻿namespace Current
+﻿namespace Current.GUI
 {
     partial class CurrentMainForm
     {
@@ -42,7 +42,7 @@
             this.dockManagerApplicationContent = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanelCableList = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
-            this.cableListCtrl = new Current.CableListControl();
+            this.cableListCtrl = new Current.GUI.Controls.CableListControl();
             this.dockPanelCrewList = new DevExpress.XtraBars.Docking.DockPanel();
             this.controlContainer1 = new DevExpress.XtraBars.Docking.ControlContainer();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -378,7 +378,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup documentGroup1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document1;
-        private CableListControl cableListCtrl;
+        private Controls.CableListControl cableListCtrl;
         private DevExpress.Utils.WorkspaceManager workspaceManager;
         private DevExpress.XtraBars.BarButtonItem barButtonItemAddNewCable;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.Document document2;

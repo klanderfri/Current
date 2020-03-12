@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Current
+namespace Current.GUI.BaseComponents
 {
     public partial class ParentUserControl : UserControl
     {

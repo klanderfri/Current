@@ -1,4 +1,4 @@
-﻿namespace Current
+﻿namespace Current.GUI.BaseComponents
 {
     partial class ParentUserControl
     {
