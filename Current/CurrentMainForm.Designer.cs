@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurrentMainForm));
-            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
-            DevExpress.Utils.Animation.PushTransition pushTransition1 = new DevExpress.Utils.Animation.PushTransition();
+            DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer dockingContainer2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer();
+            DevExpress.Utils.Animation.PushTransition pushTransition2 = new DevExpress.Utils.Animation.PushTransition();
             this.documentGroup1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.DocumentGroup(this.components);
             this.document1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
             this.document2 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.Document(this.components);
@@ -52,7 +52,7 @@
             this.colId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAdress = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAddress = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPhone = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHasBasicTraining = new DevExpress.XtraGrid.Columns.GridColumn();
             this.documentManagerApplicationContent = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
@@ -229,7 +229,7 @@
             this.colId,
             this.colFullName,
             this.colEmail,
-            this.colAdress,
+            this.colAddress,
             this.colPhone,
             this.colHasBasicTraining});
             this.gridView1.GridControl = this.gridControl1;
@@ -260,13 +260,13 @@
             this.colEmail.VisibleIndex = 2;
             this.colEmail.Width = 250;
             // 
-            // colAdress
+            // colAddress
             // 
-            this.colAdress.FieldName = "Adress";
-            this.colAdress.Name = "colAdress";
-            this.colAdress.Visible = true;
-            this.colAdress.VisibleIndex = 3;
-            this.colAdress.Width = 250;
+            this.colAddress.FieldName = "Address";
+            this.colAddress.Name = "colAddress";
+            this.colAddress.Visible = true;
+            this.colAddress.VisibleIndex = 3;
+            this.colAddress.Width = 250;
             // 
             // colPhone
             // 
@@ -300,16 +300,16 @@
             this.tabbedView1.Documents.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseDocument[] {
             this.document1,
             this.document2});
-            dockingContainer1.Element = this.documentGroup1;
+            dockingContainer2.Element = this.documentGroup1;
             this.tabbedView1.RootContainer.Nodes.AddRange(new DevExpress.XtraBars.Docking2010.Views.Tabbed.DockingContainer[] {
-            dockingContainer1});
+            dockingContainer2});
             // 
             // workspaceManager
             // 
             this.workspaceManager.AllowTransitionAnimation = DevExpress.Utils.DefaultBoolean.False;
             this.workspaceManager.SaveTargetControlSettings = true;
             this.workspaceManager.TargetControl = this;
-            this.workspaceManager.TransitionType = pushTransition1;
+            this.workspaceManager.TransitionType = pushTransition2;
             // 
             // crewTableAdapter
             // 
@@ -373,7 +373,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colId;
         private DevExpress.XtraGrid.Columns.GridColumn colFullName;
         private DevExpress.XtraGrid.Columns.GridColumn colEmail;
-        private DevExpress.XtraGrid.Columns.GridColumn colAdress;
+        private DevExpress.XtraGrid.Columns.GridColumn colAddress;
         private DevExpress.XtraGrid.Columns.GridColumn colPhone;
         private DevExpress.XtraGrid.Columns.GridColumn colHasBasicTraining;
     }
